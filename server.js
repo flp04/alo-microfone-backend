@@ -8,9 +8,17 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
+let equipes = [
+    'corinthia', 'parmera'
+]
+
 app.get('/', (req, res) => {
   res.send(`Hi! Server is listening on port ${port}`)
 });
+
+app.get('/equipes', (req, res) => {
+    res.send(equipes)
+  });
 
 // listen on the port
 app.listen(port);

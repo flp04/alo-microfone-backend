@@ -20,5 +20,9 @@ app.get('/equipes', (req, res) => {
     res.send(equipes)
   });
 
+app.post('/equipes/', (req, res) => {
+    res.send(req)
+});
+
 // listen on the port
 app.listen(port);
